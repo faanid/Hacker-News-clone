@@ -1,11 +1,27 @@
-new Navigator(null, true, "#");
+import { Stories } from "../pages/stories";
 
-class RouterHandler {
+const router = new Navigo(null, true, "#");
+console.log(router);
+
+export default class RouterHandler {
   constructor() {
-    this.createRouter();
+    this.createRoutes();
   }
 
-  createRouter() {
-    const routes = [{}];
+  createRoutes() {
+    const routes = [
+      { path: "/", page: Stories },
+      { path: "/new", page: Stories },
+      { path: "/ask", page: Stories },
+      { path: "/show", page: Stories },
+    ];
+
+    routes.forEach(({ path, page }) => {
+      router
+        .on(path, () => {
+          page(path);
+        })
+        .resolve();
+    });
   }
 }

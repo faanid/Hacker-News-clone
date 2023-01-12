@@ -1,5 +1,9 @@
+import RouterHandler from "./router";
+
 class App {
-  constructor() {}
+  constructor() {
+    new RouterHandler();
+  }
 }
 
 new App();
