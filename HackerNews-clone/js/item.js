@@ -1,4 +1,5 @@
 import Story from "../../components/Story";
+import Comment from "../../components/Comment";
 import view from "../utils/view";
 import baseUrl from "../utils/baseUrl";
 
@@ -23,7 +24,7 @@ export default function Item() {
   ${Story(story)}
   </div>
   <hr/>>
-  ${hasComments ? story.comments.map(comment => JSON.stringify(comment)).join('') : 'No comments'}
+  ${hasComments ? story.comments.map(comment => Comment(comment)).join('') : 'No comments'}
   `;
 }
 
