@@ -1,4 +1,4 @@
-import Story from "../../components/Story";
+import Story from "../components/Story";
 import view from "../utils/view";
 import baseUrl from "../utils/baseUrl";
 

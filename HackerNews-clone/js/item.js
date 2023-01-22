@@ -1,5 +1,5 @@
-import Story from "../../components/Story";
-import Comment from "../../components/Comment";
+import Story from "../components/Story";
+import Comment from "../components/Comment";
 import view from "../utils/view";
 import baseUrl from "../utils/baseUrl";
 
