@@ -22,15 +22,16 @@ export default function Favorites() {
   }
   </div> `;
 
-  document.querySelectorAll(".favorite").forEach((favoriteButton) => {
-    favoriteButton.addEventListener("click", async function () {
-      const story = JSON.parse(this.dataset.story);
-      const isFavorited = checkFavorite(favorites, story);
-      store.dispatch({
-        type: isFavorited ? "REMOVE_FAVORITE" : "ADD_FAVORITE",
-        payload: { favorite: story },
-      });
-      Favorites();
-    });
-  });
+  // document.querySelectorAll(".favorite").forEach((favoriteButton) => {
+  //   favoriteButton.addEventListener("click", async function () {
+  //     const story = JSON.parse(this.dataset.story);
+  //     const isFavorited = checkFavorite(favorites, story);
+  //     store.dispatch({
+  //       type: isFavorited ? "REMOVE_FAVORITE" : "ADD_FAVORITE",
+  //       payload: { favorite: story },
+  //     });
+  //     Favorites();
+  //   });
+  // });
+
 }
